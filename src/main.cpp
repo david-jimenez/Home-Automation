@@ -9,6 +9,7 @@
 // Set LED_BUILTIN if it is not defined by Arduino framework
 #define LED_BUILTIN 16
 
+char startupMessage [] = "Hello Jenkins!\n";
 void setup()
 {
   // initialize LED digital pin as an output.
@@ -20,7 +21,7 @@ void loop()
 {
   // turn the LED on (HIGH is the voltage level)
   digitalWrite(LED_BUILTIN, HIGH);
-  Serial.write("Hello World\n");
+  Serial.write(startupMessage);
 
   // wait for a second
   delay(1000);
